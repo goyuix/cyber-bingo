@@ -2,7 +2,7 @@
     ViewBag.Title = "Home Page";
     var random = new Random(ViewBag.Id);
     var words = new[] { "Access", "Account", "Active Directory", "Administrator", "Attack", "Authorized", "Breach", "Browser", "Clearance", "ColdFusion", "Control", "Credential", "Data", "Digital", "DMZ", "Download", "Elevated", "Firefox", "Firewall", "Group", "History", "IDE", "Internet", "Internet Explorer", "Intranet", "Java", "Login", "Logon", "Malware", "Microsoft", "Network", "Operator", "Password", "Perimeter", "Permissions", "Phishing", "PIN", "Policy", "Privilege", "Safety", "Scan", "Security", "Server", "Social Network", "Software", "Sophos", "SPAM", "Surface", "System", "Trojan", "Unathorized", "Vector", "Virus", "Vulnerability", "Warning", "Web", "Windows" };
-    var mixed = words.OrderBy(s => random.Next());
+    var mixed = words.OrderBy(s => random.Next()).ToList();
 }
 
 <table class="bingo-table">
