@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var random = new Random(ViewBag.Id);
+    var words = new[] { "Access", "Account", "Active Directory", "Administrator", "Attack", "Authorized", "Breach", "Browser", "Clearance", "ColdFusion", "Control", "Credential", "Data", "Digital", "DMZ", "Download", "Elevated", "Firefox", "Firewall", "Group", "History", "IDE", "Internet", "Internet Explorer", "Intranet", "Java", "Login", "Logon", "Malware", "Microsoft", "Network", "Operator", "Password", "Perimeter", "Permissions", "Phishing", "PIN", "Policy", "Privilege", "Safety", "Scan", "Security", "Server", "Social Network", "Software", "Sophos", "SPAM", "Surface", "System", "Trojan", "Unathorized", "Vector", "Virus", "Vulnerability", "Warning", "Web", "Windows" };
+    var mixed = words.OrderBy(s => random.Next());
+}
+
+<table class="bingo-table">
+    <tr class="bingo-header">
+        <th>C</th>
+        <th>Y</th>
+        <th>B</th>
+        <th>E</th>
+        <th>R</th>
+    </tr>
+    @for (int i = 0; i < 5; i++)
+    {
+        <tr class="bingo-row">
+        @foreach (var word in mixed.Skip(i * 5).Take(5))
+        { 
+            <td class="bingo-cell">@word</td>
+        }
+        </tr>
+    }
+</table>
+
+<script type="text/javascript">
+    $(".bingo-table tr:eq(3) td:eq(2)").html("Your<br/>Company<br/>Here");
+    $(".bingo-cell").click(function () {
+        $(this).toggleClass("bingo-selected");
+    });
+</script>
