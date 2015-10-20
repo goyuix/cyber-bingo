@@ -2,16 +2,17 @@
     ViewBag.Title = "Home Page";
     var random = new Random(ViewBag.Id);
     var words = new[] { "account","airfare","approval","audit","big picture","business","cash flow","charge","compliance","credit","debt","dollar","easy","economy","enforcement","expense","finance","fiscal","form","income","inflation","insight","interest","ledger","market","mileage","mobile","per diem","policy","price","productivity","profit","receipt","recession","reconcile","reimburse","report","review","routing","savings","seamless","smart","spend","statement","support","time","tracking","training","travel","violation","workflow" };
-    var mixed = words.OrderBy(s => random.Next()).ToList();
+    var mixed = words.OrderBy(s => random.Next()).ToArray();
+    mixed[12] = "Certify!";
 }
 
 <table class="bingo-table">
     <tr class="bingo-header">
-        <th>C</th>
-        <th>Y</th>
-        <th>B</th>
+        <th>S</th>
+        <th>P</th>
         <th>E</th>
-        <th>R</th>
+        <th>N</th>
+        <th>D</th>
     </tr>
     @for (int i = 0; i < 5; i++)
     {
@@ -25,7 +26,6 @@
 </table>
 
 <script type="text/javascript">
-    $(".bingo-table tr:eq(3) td:eq(2)").html("Your<br/>Company<br/>Here");
     $(".bingo-cell").click(function () {
         $(this).toggleClass("bingo-selected");
     });
