@@ -4,8 +4,8 @@
     var cyberWords = new[] { "Access", "Account", "Active Directory", "Administrator", "Attack", "Authorized", "Breach", "Browser", "Clearance", "ColdFusion", "Control", "Credential", "Data", "Digital", "DMZ", "Download", "Elevated", "Firefox", "Firewall", "Group", "History", "IDE", "Internet", "Internet Explorer", "Intranet", "Java", "Login", "Logon", "Malware", "Microsoft", "Network", "Operator", "Password", "Perimeter", "Permissions", "Phishing", "PIN", "Policy", "Privilege", "Safety", "Scan", "Security", "Server", "Social Network", "Software", "Sophos", "SPAM", "Surface", "System", "Trojan", "Unathorized", "Vector", "Virus", "Vulnerability", "Warning", "Web", "Windows" };
     var certifyWords = new[] { "account","airfare","approval","audit","big picture","business","cash flow","charge","compliance","credit","debt","dollar","easy","economy","enforcement","expense","finance","fiscal","form","income","inflation","insight","interest","ledger","market","mileage","mobile","per diem","policy","price","productivity","profit","receipt","recession","reconcile","reimburse","report","review","routing","savings","seamless","smart","spend","statement","support","time","tracking","training","travel","violation","workflow" };
     var words = new[] { "Apps", "Azure", "Bill Baer", "Business", "Capability", "Chuck Friedman", "Cloud", "Community", "Compliance", "Connected", "Delve", "Developer", "Exclusive", "Experience", "Farm", "Feature", "Feature Pack", "Flow", "Foundation", "Framework", "Future", "Graph", "Groups", "Gulp", "Harness", "Hybrid", "Impact", "InfoPath", "Inform", "Innovation", "Insight", "Integration", "Intelligent", "Intranet", "James Phillips", "JavaScript", "Jeff Teper", "Knowledge", "Library", "List", "Logic", "Min-Role", "Mobile", "Network", "Object Model", "OData", "Office 365", "OneDrive", "On-Premises", "Open", "People", "PnP", "Portal", "Power BI", "PowerApps", "PowerShell", "Privacy", "Publishing", "Responsive", "REST", "Roadmap", "Seamless", "Search", "Security", "Share", "Sites", "Solution", "Teams", "Transform", "Visual Studio", "Webpart", "Windows", "Workbench", "Workflow", "Workplace", "Yammer", "Yeoman" };
-    var mixed = words.OrderBy(s => random.Next()).ToArray();
-    mixed[12] = "Certify!";
+    var mixed = words.OrderBy(s => random.Next()).Take(25).ToArray();
+    mixed[12] = "SharePoint";
 }
 
 <table class="bingo-table">
@@ -39,7 +39,6 @@
 </div>
 
 <script type="text/javascript">
-    $("bingo-row:nth(2) td:nth(2)").text("FREE");
     $(".bingo-cell").click(function () {
         $(this).toggleClass("bingo-selected");
     });
