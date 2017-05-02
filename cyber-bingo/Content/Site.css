@@ -359,4 +359,6 @@ div#title h1 {
     #new-card { display: none; }
     body { background-color: #FFF; }
     #header { display: none; }
+    .bingo-table td { border: solid 1px #0072C6; }
+    .bingo-table th { border: solid 1px #0072C6; color: #0072C6;}
 }
