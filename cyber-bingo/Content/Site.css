@@ -343,6 +343,8 @@ div#title {
     text-align: center;
     width: 1in;
     height: 1in;
+    font-weight: bold;
+
 }
 .bingo-selected {
     background-color: azure;
@@ -352,4 +354,9 @@ div#title {
 }
 div#title h1 {
     margin: auto;
+}
+@media print {
+    #new-card { display: none; }
+    body { background-color: #FFF; }
+    #header { display: none; }
 }
