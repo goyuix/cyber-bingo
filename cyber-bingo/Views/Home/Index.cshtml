@@ -28,7 +28,7 @@
         <tr class="bingo-row">
         @foreach (var word in mixed.Skip(i * 5).Take(5))
         { 
-            <td class="bingo-cell">@word</td>
+            <td class="bingo-cell">@Html.Raw(word)</td>
         }
         </tr>
     }
