@@ -326,17 +326,20 @@ div#title {
 .bingo-table {
     margin: auto;
     width: 7in;
-    height: 8in;
+    height: 10in;
+}
+.bingo-table tr {
+    height: 1in;
 }
 .bingo-table th {
     text-align: center;
-    height: 15%;
+    height: 1in;
     font-size: 48pt;
 }
 .bingo-table td {
     text-align: center;
-    width: 20%;
-    height: 15%;
+    width: 1in;
+    height: 1in;
 }
 .bingo-selected {
     background-color: azure;
