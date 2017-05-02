@@ -227,8 +227,8 @@ table td {
 table th {
     padding: 6px 5px;
     text-align: left;
-    background-color: #e8eef4;
-    border: solid 1px #e8eef4;
+    background-color: #0072C6;
+    border: solid 1px #0060A5;
 }
 
 /* MISC  
@@ -335,6 +335,9 @@ div#title {
     text-align: center;
     height: 1in;
     font-size: 48pt;
+    background-color: #0072C6;
+    border: solid 1px #0060A5;
+    color: #FFF;
 }
 .bingo-table td {
     text-align: center;
