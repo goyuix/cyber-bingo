@@ -3,24 +3,22 @@
     var random = new Random(ViewBag.Id);
     var cyberWords = new[] { "Access", "Account", "Active Directory", "Administrator", "Attack", "Authorized", "Breach", "Browser", "Clearance", "ColdFusion", "Control", "Credential", "Data", "Digital", "DMZ", "Download", "Elevated", "Firefox", "Firewall", "Group", "History", "IDE", "Internet", "Internet Explorer", "Intranet", "Java", "Login", "Logon", "Malware", "Microsoft", "Network", "Operator", "Password", "Perimeter", "Permissions", "Phishing", "PIN", "Policy", "Privilege", "Safety", "Scan", "Security", "Server", "Social Network", "Software", "Sophos", "SPAM", "Surface", "System", "Trojan", "Unathorized", "Vector", "Virus", "Vulnerability", "Warning", "Web", "Windows" };
     var certifyWords = new[] { "account","airfare","approval","audit","big picture","business","cash flow","charge","compliance","credit","debt","dollar","easy","economy","enforcement","expense","finance","fiscal","form","income","inflation","insight","interest","ledger","market","mileage","mobile","per diem","policy","price","productivity","profit","receipt","recession","reconcile","reimburse","report","review","routing","savings","seamless","smart","spend","statement","support","time","tracking","training","travel","violation","workflow" };
-    var words = new[] { "Apps", "Azure", "Bill Baer", "Business", "Capability", "Chuck Friedman", "Cloud", "Community", "Compliance", "Connected", "Delve", "Developer", "Exclusive", "Experience", "Farm", "Feature", "Feature Pack", "Flow", "Foundation", "Framework", "Future", "Graph", "Groups", "Gulp", "Harness", "Hybrid", "Impact", "InfoPath", "Inform", "Innovation", "Insight", "Integration", "Intelligent", "Intranet", "James Phillips", "JavaScript", "Jeff Teper", "Knowledge", "Library", "List", "Logic", "Min-Role", "Mobile", "Network", "Object Model", "OData", "Office 365", "OneDrive", "On-Premises", "Open", "People", "PnP", "Portal", "Power BI", "PowerApps", "PowerShell", "Privacy", "Publishing", "Responsive", "REST", "Roadmap", "Seamless", "Search", "Security", "Share", "Sites", "Solution", "Teams", "Transform", "Visual Studio", "Webpart", "Windows", "Workbench", "Workflow", "Workplace", "Yammer", "Yeoman" };
+    var sharePointWords = new[] { "Apps", "Azure", "Bill Baer", "Business", "Capability", "Chuck Friedman", "Cloud", "Community", "Compliance", "Connected", "Delve", "Developer", "Exclusive", "Experience", "Farm", "Feature", "Feature Pack", "Flow", "Foundation", "Framework", "Future", "Graph", "Groups", "Gulp", "Harness", "Hybrid", "Impact", "InfoPath", "Inform", "Innovation", "Insight", "Integration", "Intelligent", "Intranet", "James Phillips", "JavaScript", "Jeff Teper", "Knowledge", "Library", "List", "Logic", "Min-Role", "Mobile", "Network", "Object Model", "OData", "Office 365", "OneDrive", "On-Premises", "Open", "People", "PnP", "Portal", "Power BI", "PowerApps", "PowerShell", "Privacy", "Publishing", "Responsive", "REST", "Roadmap", "Seamless", "Search", "Security", "Share", "Sites", "Solution", "Teams", "Transform", "Visual Studio", "Webpart", "Windows", "Workbench", "Workflow", "Workplace", "Yammer", "Yeoman" };
+    var persons = new[] { "Heavenly Father", "Jesus Christ", "Moroni", "James the Baptist", "Peter", "James", "John", "Moses", "Elias", "Elijah", "Adam", "Michael", "Noah", "Gabriel", "Raphael", "Lehi", "Nephi", "Alma", "Mormon", "Seth", "Enoch", "Isaac", "Jacob", "Three Nephites", "Abraham", "Paul" }
     var mixed = words.OrderBy(s => random.Next()).Take(25).ToArray();
-    mixed[12] = "<img src=\"/Content/SharePoint.svg\" style=\"width:1in\" />";
+    
+    // remember to always put Christ in the center
+    var index = Array.IndexOf(mixed, "Jesus Christ");
+    mixed[index] = mixed[12]; 
+    mixed[12] = "Jesus Christ";
 }
 
 <table class="bingo-table">
     <tr class="bingo-header">
-        <th>S</th>
-        <th>H</th>
-        <th>A</th>
+        <th>CH</th>
         <th>R</th>
-        <th>E</th>
-    </tr>
-    <tr class="bingo-header">
-        <th>P</th>
-        <th>O</th>
         <th>I</th>
-        <th>N</th>
+        <th>S</th>
         <th>T</th>
     </tr>
     @for (int i = 0; i < 5; i++)
